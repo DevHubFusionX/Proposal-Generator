@@ -1,16 +1,70 @@
-# React + Vite
+# ProposalCraft - Professional Proposal Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich proposal generator built with React for freelancers, agencies, and businesses to create professional proposals in minutes.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Complete Branding Customization** - Customize company info, logo, colors, and currency
+- **Smart Template System** - 6 pre-built professional templates
+- **Auto-Save & History** - Never lose your work
+- **PDF & PNG Export** - Client-ready documents and social media images
+- **Toast Notifications** - Professional user feedback
+- **Responsive Design** - Works on all devices
 
-## React Compiler
+## 📦 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start development server
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Build for production
+npm run build
+```
+
+## ⚙️ Configuration
+
+Edit `src/config/branding.js` to set your default branding:
+
+```javascript
+export const brandingConfig = {
+  company: {
+    name: 'Your Company Name',
+    phone: '+1 234 567 8900',
+    email: 'hello@yourcompany.com',
+    website: 'https://yourcompany.com',
+    logoUrl: ''
+  },
+  app: {
+    name: 'ProposalCraft',
+    tagline: 'Professional Proposal Generator',
+    logo: 'PC'
+  },
+  defaults: {
+    currency: '$',
+    terms: 'Your default payment terms'
+  }
+};
+```
+
+Users can also customize all settings through the Settings modal in the app.
+
+## 🎯 Usage
+
+1. **Edit Proposal** - Fill in company, client, and project details
+2. **Use Templates** - Select from pre-built templates
+3. **Export** - Generate PDF or PNG
+4. **Save to History** - Keep track of all proposals
+
+## 🛠️ Tech Stack
+
+- React + Vite
+- Tailwind CSS
+- html2canvas + jsPDF
+- Lucide React Icons
+
+## 📄 License
+
+MIT License - Feel free to use for personal or commercial projects.

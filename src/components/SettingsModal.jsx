@@ -66,7 +66,7 @@ const SettingsModal = ({ isOpen, onClose, branding, onUpdateBranding, onResetBra
                     ...prev,
                     company: { ...prev.company, email: value }
                   }))}
-                  placeholder="hello@company.com"
+                  placeholder="hello@yourcompany.com"
                 />
               </div>
             </div>
@@ -97,7 +97,7 @@ const SettingsModal = ({ isOpen, onClose, branding, onUpdateBranding, onResetBra
                   ...prev,
                   app: { ...prev.app, tagline: value }
                 }))}
-                placeholder="Professional Generator"
+                placeholder="Professional Proposal Generator"
               />
               <FormField
                 label="Logo Text"
@@ -107,7 +107,7 @@ const SettingsModal = ({ isOpen, onClose, branding, onUpdateBranding, onResetBra
                   ...prev,
                   app: { ...prev.app, logo: value }
                 }))}
-                placeholder="AF"
+                placeholder="PC"
               />
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">

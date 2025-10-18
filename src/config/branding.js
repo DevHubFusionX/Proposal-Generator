@@ -2,27 +2,29 @@
 export const brandingConfig = {
   // Company Information
   company: {
-    name: 'Franklin Digital Solutions',
-    phone: '09127391830',
-    email: 'anyanwufranklin.dev@gmail.com'
+    name: 'Your Company Name',
+    phone: '+1 234 567 8900',
+    email: 'hello@yourcompany.com',
+    website: 'https://yourcompany.com',
+    logoUrl: ''
   },
   
   // App Branding
   app: {
-    name: 'Propulse',
-    tagline: 'Rocket-Powered Proposals',
-    logo: 'P', // Can be text or component
-    footerText: 'Launch Your Success with Propulse'
+    name: 'ProposalCraft',
+    tagline: 'Professional Proposal Generator',
+    logo: 'PC',
+    footerText: 'Professional Proposals Made Easy'
   },
   
   // Default Proposal Settings
   defaults: {
-    currency: '₦',
+    currency: '$',
     terms: 'Payment terms: 50% upfront, 50% on completion. Project timeline: 4-6 weeks.',
     items: [
-      { name: 'Platform Development', description: 'Full-stack web application development', cost: 0, quantity: 1 },
-      { name: 'UI/UX Design', description: 'User interface and experience design', cost: 0, quantity: 1 },
-      { name: 'Hosting & Domain', description: 'Annual hosting and domain registration', cost: 0, quantity: 1 }
+      { name: 'Service Item 1', description: 'Description of service or deliverable', cost: 0, quantity: 1 },
+      { name: 'Service Item 2', description: 'Description of service or deliverable', cost: 0, quantity: 1 },
+      { name: 'Service Item 3', description: 'Description of service or deliverable', cost: 0, quantity: 1 }
     ]
   }
 };

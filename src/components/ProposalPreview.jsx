@@ -41,17 +41,17 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
                 </div>
                 <div className="min-w-0 flex-1">
                   <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-black text-gray-900 tracking-tight mb-1 sm:mb-2 break-words">
-                    {proposal.companyName || branding?.company?.name || 'Franklin Digital Solutions'}
+                    {proposal.companyName || branding?.company?.name || 'Your Company Name'}
                   </h1>
                   <div className="w-12 sm:w-16 md:w-20 lg:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full mb-2 sm:mb-3"></div>
                   <div className="space-y-1 sm:space-y-1.5 text-[10px] sm:text-xs md:text-sm text-gray-700">
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 flex-shrink-0" />
-                      <span className="break-all">{proposal.companyEmail || branding?.company?.email || 'anyanwufranklin.dev@gmail.com'}</span>
+                      <span className="break-all">{proposal.companyEmail || branding?.company?.email || 'hello@yourcompany.com'}</span>
                     </div>
                     <div className="flex items-center gap-1 sm:gap-2">
                       <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 flex-shrink-0" />
-                      <span>{proposal.companyPhone || branding?.company?.phone || '09127391830'}</span>
+                      <span>{proposal.companyPhone || branding?.company?.phone || '+1 234 567 8900'}</span>
                     </div>
                   </div>
                 </div>
