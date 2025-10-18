@@ -3,15 +3,8 @@ import FormField from './FormField';
 
 const CompanySection = ({ proposal, updateProposal, errors, touched, handleBlur }) => {
   return (
-    <div className="card-dark rounded-2xl shadow-professional p-8">
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 rounded-xl accent-amber flex items-center justify-center">
-          <Building2 className="w-6 h-6 text-gray-900" />
-        </div>
-        <h2 className="text-2xl font-bold text-gray-100">Company Information</h2>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         <FormField
           label="Company Name"
           icon={Building2}

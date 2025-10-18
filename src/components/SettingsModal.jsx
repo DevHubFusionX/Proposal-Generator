@@ -124,8 +124,8 @@ const SettingsModal = ({ isOpen, onClose, branding, onUpdateBranding, onResetBra
                   }))}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 input-dark rounded-xl focus:outline-none transition-all duration-200 font-medium text-sm sm:text-base"
                 >
-                  {currencyOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
+                  {currencyOptions.map((option, index) => (
+                    <option key={`${option.value}-${index}`} value={option.value}>
                       {option.label} - {option.name}
                     </option>
                   ))}

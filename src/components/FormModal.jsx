@@ -35,14 +35,14 @@ const FormModal = memo(({ isOpen, onClose, proposal, updateProposal, updateItem,
         {/* Enhanced Header */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-500/10"></div>
-          <div className="relative flex items-center justify-between p-4 sm:p-6 border-b border-gray-700">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
-                <Edit3 className="w-5 h-5 text-gray-900" />
+          <div className="relative flex items-center justify-between p-3 sm:p-4 md:p-6 border-b border-gray-700">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
+                <Edit3 className="w-4 h-4 sm:w-5 sm:h-5 text-gray-900" />
               </div>
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white">Edit Proposal</h2>
-                <p className="text-sm text-gray-400">Modify your proposal details</p>
+                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white">Edit Proposal</h2>
+                <p className="text-xs sm:text-sm text-gray-400 hidden sm:block">Modify your proposal details</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -71,24 +71,25 @@ const FormModal = memo(({ isOpen, onClose, proposal, updateProposal, updateItem,
         </div>
         
         {/* Footer with Actions */}
-        <div className="flex-shrink-0 border-t border-gray-700 p-4 sm:p-6 bg-gray-800/50">
+        <div className="flex-shrink-0 border-t border-gray-700 p-3 sm:p-4 md:p-6 bg-gray-800/50">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <FileText className="w-4 h-4" />
-              <span>Changes are auto-saved</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
+              <FileText className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Changes are auto-saved</span>
+              <span className="sm:hidden">Auto-saved</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={onClose}
-                className="px-4 py-2 text-gray-400 hover:text-white transition-colors"
+                className="px-3 sm:px-4 py-2 text-gray-400 hover:text-white transition-colors text-sm"
               >
                 Close
               </button>
               <button
                 onClick={onClose}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 font-semibold rounded-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-200"
+                className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900 font-semibold rounded-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-200 text-sm"
               >
-                <Save className="w-4 h-4" />
+                <Save className="w-3 h-3 sm:w-4 sm:h-4" />
                 Done
               </button>
             </div>

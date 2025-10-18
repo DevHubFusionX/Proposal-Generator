@@ -24,7 +24,7 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
       
       <div 
         ref={ref}
-        className="preview-card p-6 sm:p-8 lg:p-12 rounded-xl sm:rounded-2xl border border-gray-200 shadow-lg"
+        className="preview-card p-4 sm:p-6 md:p-8 lg:p-12 rounded-lg sm:rounded-xl md:rounded-2xl border border-gray-200 shadow-lg overflow-x-auto"
         style={{ minHeight: '500px' }}
       >
         {/* Header */}
@@ -32,7 +32,7 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl opacity-30"></div>
           
-          <div className="relative p-6 sm:p-8">
+          <div className="relative p-4 sm:p-6 md:p-8">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
               {/* Company Info */}
               <div className="flex items-start gap-4 sm:gap-5">
@@ -40,11 +40,11 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
                   <Logo size="lg" className="shadow-lg" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h1 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight mb-2">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 tracking-tight mb-2 break-words">
                     {proposal.companyName || branding?.company?.name || 'Franklin Digital Solutions'}
                   </h1>
                   <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full mb-3"></div>
-                  <div className="space-y-1.5 text-sm text-gray-700">
+                  <div className="space-y-1.5 text-xs sm:text-sm text-gray-700">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4 text-amber-500 flex-shrink-0" />
                       <span className="break-all">{proposal.companyEmail || branding?.company?.email || 'anyanwufranklin.dev@gmail.com'}</span>
@@ -58,12 +58,12 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
               </div>
               
               {/* Proposal Info */}
-              <div className="lg:text-right bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100 lg:min-w-[280px]">
+              <div className="lg:text-right bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 shadow-sm border border-gray-100 lg:min-w-[280px]">
                 <div className="flex items-center gap-2 mb-3 lg:justify-end">
-                  <Hash className="w-5 h-5 text-amber-500" />
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900">PROJECT PROPOSAL</h2>
+                  <Hash className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" />
+                  <h2 className="text-sm sm:text-lg md:text-xl font-bold text-gray-900">PROJECT PROPOSAL</h2>
                 </div>
-                <div className="space-y-2 text-sm">
+                <div className="space-y-2 text-xs sm:text-sm">
                   <div className="flex justify-between lg:justify-end lg:gap-3">
                     <span className="text-gray-600">Proposal #:</span>
                     <span className="font-semibold text-gray-900">#{proposal.proposalNumber}</span>
@@ -85,16 +85,16 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
         {/* Client & Project Info Row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
           {/* Bill To */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 sm:p-6 border border-blue-100">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-blue-100">
             <div className="flex items-center gap-2 mb-4">
               <User className="w-5 h-5 text-blue-600" />
               <h3 className="text-sm font-bold text-blue-900 uppercase tracking-wide">Bill To</h3>
             </div>
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-2 break-words">
                 {proposal.clientName || 'Client Name'}
               </h4>
-              <div className="text-sm text-gray-600 space-y-1.5">
+              <div className="text-xs sm:text-sm text-gray-600 space-y-1.5">
                 {proposal.clientEmail && (
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4 text-blue-500" />
@@ -112,13 +112,13 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
           </div>
           
           {/* Project Overview */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 sm:p-6 border border-green-100">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-green-100">
             <div className="flex items-center gap-2 mb-4">
               <Building2 className="w-5 h-5 text-green-600" />
               <h3 className="text-sm font-bold text-green-900 uppercase tracking-wide">Project Overview</h3>
             </div>
             <div className="bg-white rounded-lg p-4 shadow-sm">
-              <h4 className="font-bold text-gray-900 text-lg mb-2">
+              <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-2 break-words">
                 {proposal.projectTitle || 'Project Title'}
               </h4>
               {proposal.projectDescription && (
@@ -137,36 +137,36 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
           <h3 className="text-sm font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Investment Breakdown</h3>
           
           {/* Table Header */}
-          <div className="bg-gray-900 text-white p-2 sm:p-3 rounded-t-lg">
-            <div className="grid grid-cols-12 gap-1 sm:gap-3 font-semibold text-xs">
-              <div className="col-span-6">DESCRIPTION</div>
-              <div className="col-span-1 text-center">QTY</div>
-              <div className="col-span-2 text-right">UNIT PRICE</div>
-              <div className="col-span-3 text-right">TOTAL</div>
+          <div className="bg-gray-900 text-white p-2 sm:p-3 rounded-t-lg overflow-x-auto">
+            <div className="grid grid-cols-12 gap-1 sm:gap-2 md:gap-3 font-semibold text-[10px] sm:text-xs min-w-[500px] sm:min-w-0">
+              <div className="col-span-5 sm:col-span-6">DESCRIPTION</div>
+              <div className="col-span-2 sm:col-span-1 text-center">QTY</div>
+              <div className="col-span-2 sm:col-span-2 text-right">PRICE</div>
+              <div className="col-span-3 sm:col-span-3 text-right">TOTAL</div>
             </div>
           </div>
           
           {/* Table Body */}
-          <div className="bg-white border-x border-gray-200">
+          <div className="bg-white border-x border-gray-200 overflow-x-auto">
             {proposal.items.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 gap-1 sm:gap-3 p-2 sm:p-3 border-b border-gray-200 hover:bg-gray-50">
-                <div className="col-span-6">
-                  <div className="font-semibold text-gray-900 text-xs sm:text-sm">
+              <div key={index} className="grid grid-cols-12 gap-1 sm:gap-2 md:gap-3 p-2 sm:p-3 border-b border-gray-200 hover:bg-gray-50 min-w-[500px] sm:min-w-0">
+                <div className="col-span-5 sm:col-span-6">
+                  <div className="font-semibold text-gray-900 text-[10px] sm:text-xs md:text-sm break-words">
                     {item.name || `Item ${index + 1}`}
                   </div>
                   {item.description && (
-                    <div className="text-xs text-gray-600 hidden sm:block">
+                    <div className="text-[9px] sm:text-xs text-gray-600 hidden md:block">
                       {item.description}
                     </div>
                   )}
                 </div>
-                <div className="col-span-1 text-center text-gray-700 text-xs sm:text-sm">
+                <div className="col-span-2 sm:col-span-1 text-center text-gray-700 text-[10px] sm:text-xs md:text-sm">
                   {item.quantity || 1}
                 </div>
-                <div className="col-span-2 text-right font-semibold text-gray-900 text-xs sm:text-sm">
+                <div className="col-span-2 sm:col-span-2 text-right font-semibold text-gray-900 text-[10px] sm:text-xs md:text-sm">
                   {proposal.currency || branding?.defaults?.currency || '₦'}{parseFloat(item.cost || 0).toLocaleString()}
                 </div>
-                <div className="col-span-3 text-right font-bold text-gray-900 text-xs sm:text-sm">
+                <div className="col-span-3 sm:col-span-3 text-right font-bold text-gray-900 text-[10px] sm:text-xs md:text-sm">
                   {proposal.currency || branding?.defaults?.currency || '₦'}{(parseFloat(item.cost || 0) * parseFloat(item.quantity || 1)).toLocaleString()}
                 </div>
               </div>
@@ -174,8 +174,8 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
           </div>
           
           {/* Totals */}
-          <div className="bg-white border-x border-b border-gray-200 rounded-b-lg">
-            <div className="p-2 sm:p-3 space-y-1 text-xs sm:text-sm">
+          <div className="bg-white border-x border-b border-gray-200 rounded-b-lg overflow-x-auto">
+            <div className="p-2 sm:p-3 space-y-1 text-[10px] sm:text-xs md:text-sm min-w-[300px] sm:min-w-0">
               <div className="flex justify-between text-gray-700">
                 <span>Subtotal:</span>
                 <span className="font-semibold">{proposal.currency || branding?.defaults?.currency || '₦'}{subtotal.toLocaleString()}</span>
@@ -196,7 +196,7 @@ const ProposalPreview = forwardRef(({ proposal, branding: brandingProp }, ref) =
               )}
               
               <div className="border-t border-gray-300 pt-2 mt-2">
-                <div className="flex justify-between text-base sm:text-lg font-bold text-gray-900">
+                <div className="flex justify-between text-sm sm:text-base md:text-lg font-bold text-gray-900">
                   <span>TOTAL AMOUNT:</span>
                   <span className="text-amber-500">{proposal.currency || branding?.defaults?.currency || '₦'}{total.toLocaleString()}</span>
                 </div>

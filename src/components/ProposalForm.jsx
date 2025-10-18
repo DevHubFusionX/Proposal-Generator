@@ -66,22 +66,23 @@ const ProposalForm = memo(({ proposal, updateProposal, updateItem, addItem, remo
   return (
     <div className="space-y-6">
       {/* Section Navigation */}
-      <div className="bg-gray-800 rounded-xl p-4">
-        <h3 className="text-sm font-semibold text-gray-300 mb-3">Form Sections</h3>
+      <div className="bg-gray-800 rounded-lg sm:rounded-xl p-3 sm:p-4">
+        <h3 className="text-xs sm:text-sm font-semibold text-gray-300 mb-2 sm:mb-3">Form Sections</h3>
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
           {sections.map(({ id, label, icon: Icon, hasErrors }) => (
             <button
               key={id}
               onClick={() => setActiveSection(id)}
               className={`
-                relative flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-all duration-200
+                relative flex items-center justify-center sm:justify-start gap-2 p-2 sm:p-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200
                 ${activeSection === id 
                   ? 'bg-amber-500 text-gray-900' 
                   : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 }
               `}
             >
-              <Icon className="w-4 h-4" />
+              <Icon className="w-4 h-4 sm:w-4 sm:h-4" />
+              <span className="sm:hidden text-[10px]">{label}</span>
               <span className="hidden sm:inline">{label}</span>
               {hasErrors && (
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
@@ -92,13 +93,13 @@ const ProposalForm = memo(({ proposal, updateProposal, updateItem, addItem, remo
       </div>
 
       {/* Active Section Content */}
-      <div className="bg-gray-800 rounded-xl p-6">
-        <div className="mb-4">
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+      <div className="bg-gray-800 rounded-lg sm:rounded-xl p-4 sm:p-6">
+        <div className="mb-3 sm:mb-4">
+          <h3 className="text-base sm:text-lg font-semibold text-white flex items-center gap-2">
             {(() => {
               const currentSection = sections.find(s => s.id === activeSection);
               const IconComponent = currentSection?.icon;
-              return IconComponent ? <IconComponent className="w-5 h-5 text-amber-400" /> : null;
+              return IconComponent ? <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" /> : null;
             })()}
             {sections.find(s => s.id === activeSection)?.label} Details
           </h3>
@@ -109,8 +110,8 @@ const ProposalForm = memo(({ proposal, updateProposal, updateItem, addItem, remo
       </div>
 
       {/* Progress Indicator */}
-      <div className="bg-gray-800 rounded-xl p-4">
-        <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+      <div className="bg-gray-800 rounded-lg sm:rounded-xl p-3 sm:p-4">
+        <div className="flex items-center justify-between text-xs sm:text-sm text-gray-400 mb-2">
           <span>Form Progress</span>
           <span>{sections.findIndex(s => s.id === activeSection) + 1} of {sections.length}</span>
         </div>
