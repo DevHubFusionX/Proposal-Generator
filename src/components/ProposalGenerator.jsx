@@ -6,6 +6,7 @@ import HistoryModal from './HistoryModal';
 import SettingsModal from './SettingsModal';
 import Sidebar from './Sidebar';
 import Toast from './Toast';
+import LoadingScreen from './LoadingScreen';
 import { useProposal } from '../hooks/useProposal';
 import { useExport } from '../hooks/useExport';
 import { useBranding } from '../hooks/useBranding';
@@ -48,6 +49,7 @@ const ProposalGenerator = () => {
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const proposalRef = useRef();
 
   const handleExportPDF = useCallback(() => {
@@ -109,6 +111,14 @@ const ProposalGenerator = () => {
     success('Settings reset to default!');
   }, [resetBranding, success]);
 
+  const handleLoadingComplete = useCallback(() => {
+    setIsLoading(false);
+  }, []);
+
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
 
   return (
     <div className="min-h-screen dark-bg flex">

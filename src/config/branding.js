@@ -9,10 +9,10 @@ export const brandingConfig = {
   
   // App Branding
   app: {
-    name: 'ProposalCraft',
-    tagline: 'Professional Generator',
-    logo: 'AF', // Can be text or component
-    footerText: 'Professional Proposals Made Easy'
+    name: 'Propulse',
+    tagline: 'Rocket-Powered Proposals',
+    logo: 'P', // Can be text or component
+    footerText: 'Launch Your Success with Propulse'
   },
   
   // Default Proposal Settings
