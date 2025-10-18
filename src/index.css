@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  background: #111827;
+  color: #f3f4f6;
+}
+
+.dark-bg {
+  background: #111827;
+}
+
+.card-dark {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.shadow-professional {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(107, 114, 128, 0.1);
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.input-dark {
+  background: #1f2937;
+  border: 1px solid #374151;
+  color: #f3f4f6;
+}
+
+.input-dark:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: #111827;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  transform: translateY(-1px);
+}
+
+.preview-card {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Fix for html2canvas - override modern color functions */
+.preview-card * {
+  color: #111827 !important;
+}
+
+/* Background colors */
+.preview-card .bg-gray-50,
+.preview-card .bg-white {
+  background: #f9fafb !important;
+}
+
+.preview-card .bg-gray-100 {
+  background: #f3f4f6 !important;
+}
+
+.preview-card .bg-gray-900 {
+  background: #111827 !important;
+}
+
+.preview-card .bg-white {
+  background: #ffffff !important;
+}
+
+/* Text colors */
+.preview-card .text-amber-400,
+.preview-card .text-amber-500 {
+  color: #fbbf24 !important;
+}
+
+.preview-card .text-yellow-400 {
+  color: #facc15 !important;
+}
+
+.preview-card .border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.preview-card .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.preview-card .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.preview-card .text-gray-700 {
+  color: #374151 !important;
+}
+
+.preview-card .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.preview-card .text-gray-900 {
+  color: #111827 !important;
+}
+
+.preview-card .text-white {
+  color: #ffffff !important;
+}
+
+/* Gradient overrides - replace with solid colors for html2canvas compatibility */
+.preview-card .bg-gradient-to-r {
+  background: linear-gradient(to right, #f59e0b, #facc15) !important;
+}
+
+/* Additional Tailwind v4 color fixes */
+.preview-card [class*='from-amber-'],
+.preview-card [class*='to-yellow-'],
+.preview-card [class*='to-amber-'] {
+  background-image: none !important;
+  background-color: #fbbf24 !important;
+}
+
+/* Comprehensive oklch color function overrides */
+.preview-card,
+.preview-card *,
+.preview-card *::before,
+.preview-card *::after {
+  /* Override any oklch color functions */
+  color: inherit !important;
+  background-color: inherit !important;
+  border-color: inherit !important;
+}
+
+/* Specific color overrides for common Tailwind classes */
+.preview-card .text-gray-900,
+.preview-card h1,
+.preview-card h2,
+.preview-card h3,
+.preview-card p,
+.preview-card span {
+  color: #111827 !important;
+}
+
+.preview-card .bg-white {
+  background-color: #ffffff !important;
+}
+
+.preview-card .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.preview-card .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+
+.preview-card .bg-gray-900 {
+  background-color: #111827 !important;
+}
+
+/* Force override any CSS custom properties that might contain oklch */
+.preview-card {
+  --tw-text-opacity: 1 !important;
+  --tw-bg-opacity: 1 !important;
+  --tw-border-opacity: 1 !important;
+}
+
+/* Remove any background images that might use oklch */
+.preview-card * {
+  background-image: none !important;
+}
+
+/* Override gradients with solid colors */
+.preview-card .bg-gradient-to-r {
+  background: #fbbf24 !important;
+  background-image: none !important;
+}
+
+/* Nuclear option: Override any computed styles that might contain oklch */
+.preview-card,
+.preview-card * {
+  /* Force all colors to use hex values only */
+  color: #111827 !important;
+  background-color: transparent !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Restore specific colors for elements that need them */
+.preview-card {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+.preview-card .bg-white {
+  background-color: #ffffff !important;
+}
+
+.preview-card .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.preview-card .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+
+.preview-card .bg-gray-900 {
+  background-color: #111827 !important;
+}
+
+.preview-card .text-amber-400,
+.preview-card .text-amber-500 {
+  color: #fbbf24 !important;
+}
+
+.preview-card .text-white {
+  color: #ffffff !important;
+}
+
+.preview-card .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.preview-card .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.preview-card .text-gray-700 {
+  color: #374151 !important;
+}
+
+.preview-card .text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.preview-card .text-gray-900 {
+  color: #111827 !important;
+}
+
+/* Fix table header text visibility */
+.preview-card .bg-gray-900 * {
+  color: #ffffff !important;
+}
+
+/* Custom slim scrollbar */
+.scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: #4B5563 #1F2937;
+}
+
+.scrollbar-slim::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-track {
+  background: #1F2937;
+  border-radius: 3px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb {
+  background: #4B5563;
+  border-radius: 3px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* Invisible scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
